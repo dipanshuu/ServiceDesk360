@@ -1,0 +1,53 @@
+﻿@model WebApplicationProject27July.Models.Client
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Client</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ClientId" class="control-label"></label>
+                <input asp-for="ClientId" class="form-control" />
+                <span asp-validation-for="ClientId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CName" class="control-label"></label>
+                <input asp-for="CName" class="form-control" />
+                <span asp-validation-for="CName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContractAmt" class="control-label"></label>
+                <input asp-for="ContractAmt" class="form-control" />
+                <span asp-validation-for="ContractAmt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContractDurationYrs" class="control-label"></label>
+                <input asp-for="ContractDurationYrs" class="form-control" />
+                <span asp-validation-for="ContractDurationYrs" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Country" class="control-label"></label>
+                <input asp-for="Country" class="form-control" />
+                <span asp-validation-for="Country" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

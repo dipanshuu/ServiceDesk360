@@ -8,7 +8,7 @@ namespace WebApplicationProject27July.Controllers
     public class ClientController : Controller
     {
         private readonly IClientRepositorycs _client;
-        public ClientController()
+        public ClientController(IClientRepositorycs client)
         {
             _client=new ClientRepository();
         }

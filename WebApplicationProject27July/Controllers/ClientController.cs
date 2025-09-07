@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using WebApplicationProject27July.Context;
 using WebApplicationProject27July.Models;
 using WebApplicationProject27July.Repository;
 
@@ -10,7 +11,7 @@ namespace WebApplicationProject27July.Controllers
         private readonly IClientRepositorycs _client;
         public ClientController(IClientRepositorycs client)
         {
-            _client=new ClientRepository();
+            _client = client;
         }
         // GET: ClientController
         public ActionResult Index()

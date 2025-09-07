@@ -36,11 +36,7 @@ namespace WebApplicationProject27July.Repository
 
         public void UpdateClient(Client clnt)
         {
-            var clnts=clients.First(x=>x.ClientId==clnt.ClientId);
-            clnts.CName = clnt.CName;
-            clnts.ContractAmt = clnt.ContractAmt;
-            clnts.ContractDurationYrs = clnt.ContractDurationYrs;
-            clnts.Country = clnt.Country;
+  
         }
     }
 }
